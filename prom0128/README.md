@@ -13,8 +13,10 @@ grok-exporter
 ## 部署顺序
 
 - [x] kube-state-metrics
+
+~~kubectl apply -f deploy-kube-state-metrics.yaml(会报错，获取资源的错误)~~
 ```
-kubectl apply -f deploy-kube-state-metrics.yaml
+kubectl apply -f new-kube-state-metrics.yaml
 ```
 
 - [x] node-exporter
