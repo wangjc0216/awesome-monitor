@@ -74,3 +74,5 @@ kubectl apply -f deploy-alertmanager.yaml
 ```
 
 ```
+
+如果使用docker进行部署，可以参考[docker部署](./prom-docker.md)
