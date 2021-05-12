@@ -110,6 +110,9 @@ route:
   group_wait: 30s
   group_interval: 5m
   repeat_interval: 5m
+  receiver: 'web.hook'
+receivers:
+- name: 'web.hook'
 ```
 启动Alertmanager容器：
 ```shell
