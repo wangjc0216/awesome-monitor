@@ -22,7 +22,9 @@ kubectl apply -f ns-elk.yaml
 ```
 
 - [x] elasticsearch statefulset  //在测试环境已经有本地挂载的例子了
+  
   //todo:当前遇到的问题,node0，node1，node2 如何与myapp0，myapp1，myapp2分别对应
+  
   //todo:挂载在`/data/elasticsearch`目录下，会有文件权限问题，所以现在先在宿主机上改变成为最大权限，再进行部署
 
 ```
@@ -55,7 +57,7 @@ kubectl get deploy -nelk
 kubectl apply -f ds-filebeat.yaml
 kubectl get ds -nelk
 ```
-
+docker部署方式[参考](./docker/README.md)
 
   
 

@@ -1,0 +1,18 @@
+server.name: kibana
+server.host: "0"
+elasticsearch.hosts: [ "http://es01:9200","http://es02:9200" ,"http://es03:9200"]
+
+i18n.locale: "zh-CN"
+sentinl:
+  es:
+    rollover_index: true
+  settings:
+    email:
+      active: true
+      user: jilg@yunphant.com
+      password: Eggsy1993
+      host: smtp.exmail.qq.com
+      ssl: true
+      port: 465
+    report:
+      active: true
