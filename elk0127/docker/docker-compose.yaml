@@ -65,7 +65,7 @@ services:
       - esnet
 
   kib01:
-    image:  kibana:sentinl
+    image:  kibana:6.8.4
     build: ./
     container_name: kib01
     ports:
