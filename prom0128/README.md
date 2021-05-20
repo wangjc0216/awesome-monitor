@@ -12,6 +12,11 @@ grok-exporter
 ```
 ## 部署顺序
 
+- [x] redis-exporter
+
+- [x] mysqld-exporter
+
+
 - [x] kube-state-metrics
 
 ~~kubectl apply -f deploy-kube-state-metrics.yaml(会报错，获取资源的错误)~~
