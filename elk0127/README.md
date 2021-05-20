@@ -28,7 +28,7 @@ kubectl apply -f ns-elk.yaml
   //todo:挂载在`/data/elasticsearch`目录下，会有文件权限问题，所以现在先在宿主机上改变成为最大权限，再进行部署
 
 ```
-//添加标签 kubectl label elk-wangjc-2 es=elk 删除标签 kubectl label elk-wangjc-2 es-  
+//添加标签 kubectl label node elk-wangjc-2 es=elk 删除标签 kubectl label node elk-wangjc-2 es-  
 kubectl label node fabric-test-4 es=elk
 sudo mkdir -p /data/elasticsearch
 sudo chmod -R 777 /data/elasticsearch
