@@ -77,4 +77,14 @@ kubectl apply -f deploy-alertmanager.yaml
 
 ```
 
+- [x] monitor-nginx
+对nginx进行部署，nginx中的index.html页面中记录指标监控平台和日志监控平台两个平台的地址。
+```shell
+kubectl apply -f deploy-nginx.yaml
+```
+
+
+
 如果使用docker进行部署，可以参考[docker部署](./prom-docker.md)
+
+
