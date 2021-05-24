@@ -32,9 +32,7 @@ kubectl apply -f ds-node-exporter.yaml
 cadvisor是Kubernetes自带的服务，无需额外安装
 
 - [ ] grok-exporter
-```
 
-```
 
 
 - [x] promethues
@@ -73,9 +71,7 @@ kubectl apply -f deploy-alertmanager.yaml
 
 - [ ] alertwebhook
 
-```
 
-```
 
 - [x] monitor-nginx
 对nginx进行部署，nginx中的index.html页面中记录指标监控平台和日志监控平台两个平台的地址。
