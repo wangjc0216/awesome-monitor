@@ -14,7 +14,7 @@ TSDB（Time Series Database）专门存储随时间变化的数据，如股票�
 
 与键值数据库相比，TSDB存储的数据更具有特殊的读写特征：**Vertical writes, horizontal(-ish) reads** **垂直写，水平读**
 
-<img src="/Users/wangjc/gocode/awesome/awesome-monitor/doc/image/image-20210617094156781.png" alt="image-20210617094156781" style="zoom: 50%;" />
+<img src="./image/image-20210617094156781.png" alt="image-20210617094156781" style="zoom: 50%;" />
 
 ## [Promethues 存储层的演进](https://mp.weixin.qq.com/s/t9DfxeCzh1vcTzFYsojxJg)
 
@@ -39,7 +39,7 @@ metric name是__name__标签的value:
 
 在Prototype阶段，Prometheus直接使用Leveldb作为本地持久化存储。因为Leveldb是键值对数据库，所以该设计是将Prometheus 的 metrics、label、timestamp作为key，value作为value，如下图： 
 
-<img src="/Users/wangjc/gocode/awesome/awesome-monitor/doc/image/image-20210617100919520.png" alt="image-20210617100919520" style="zoom:50%;" />
+<img src="./image/image-20210617100919520.png" alt="image-20210617100919520" style="zoom:50%;" />
 
 因为与键值数据相比，时序数据具有更显著的特征，Promethues也希望在内存中可以容纳更多活跃的时序数据。虽然Leveldb也会压缩数据，但是达不到Prometheus的要求。**所以该方案最终流产。**
 
