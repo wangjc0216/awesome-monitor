@@ -69,7 +69,10 @@ kubectl apply -f deploy-grafana.yaml
 kubectl apply -f deploy-alertmanager.yaml
 ```
 
-- [ ] alertwebhook
+- [x] pushgateway
+```
+kubectl apply -f deploy-pushgateway.yaml
+```
 
 
 
@@ -78,6 +81,8 @@ kubectl apply -f deploy-alertmanager.yaml
 ```shell
 kubectl apply -f deploy-nginx.yaml
 ```
+
+
 
 
 

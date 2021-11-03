@@ -129,6 +129,13 @@ docker.io/prom/alertmanager:latest \
 需要参考Grafana使用文档，配置promethues作为数据源，配置Alertmanager作为告警通道。
 
 
+## pushgateway
+```
+docker run --name pushgateway   -d -p 9091:9091 prom/pushgateway  --web.enable-admin-api
+```
+
+
+
 ## Reference
 
 [基于Docker搭建promethues grafana](https://www.cnblogs.com/xiao987334176/p/9930517.html)

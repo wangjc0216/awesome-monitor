@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pushgateway
+  namespace: kube-system
+  labels:
+    app: pushgateway
+spec:
+  selector:
+    matchLabels:
+      app: pushgateway
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pushgateway
+    spec:
+      containers:
+        - image: prom/pushgateway:v1.4.1
+          imagePullPolicy: IfNotPresent
+          name: pushgateway
+          args:
+            - "--web.enable-admin-api"  # 控制对admin HTTP API的访问，其中包括删除时间序列等功能
+          ports:
+            - containerPort: 9091
+              protocol: TCP
+              name: http
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 100m
+              memory: 512Mi
+      securityContext:
+        runAsUser: 0
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: kube-system
+  name: pushgateway
+  labels:
+    app: pushgateway
+spec:
+  type: NodePort
+  selector:
+    app: pushgateway
+  ports:
+    - name: http
+      port: 9091
+      nodePort: 30091
+      targetPort: 9091
