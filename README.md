@@ -23,6 +23,7 @@
 |k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0-beta | 用于Kubernetes v1.19版本 |
 | grafana/grafana:7.1.3 |  |
 | prom/alertmanager:v0.21.0 |  |
+| registry.aliyuncs.com/acs/kube-eventer-amd64:v1.2.0-484d9cd-aliyun(算是k8s事件，不算指标) | |
 
 ### Logging
 

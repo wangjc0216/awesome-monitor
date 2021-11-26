@@ -77,12 +77,24 @@ kubectl apply -f deploy-pushgateway.yaml
 
 
 - [x] monitor-nginx
+
 对nginx进行部署，nginx中的index.html页面中记录指标监控平台和日志监控平台两个平台的地址。
 ```shell
 kubectl apply -f deploy-nginx.yaml
 ```
 
 
+- [x] kube-eventer
+
+对k8s集群事件获取，保存到kafka/dingding/...
+
+> 项目链接：https://github.com/AliyunContainerService/kube-eventer
+
+```shell
+# 配置钉钉webhook
+
+kubectl apply -f deploy-kube-eventer.yaml 
+```
 
 
 
